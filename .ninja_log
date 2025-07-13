@@ -1,0 +1,33 @@
+# ninja log v6
+15	204	7741319379275071	3rdparty/duckx/duckx_autogen/timestamp	777dc6a36ab2b640
+15	204	7741319379275071	3rdparty/duckx/duckx_autogen/mocs_compilation.cpp	777dc6a36ab2b640
+207	273	7741319379815203	3rdparty/duckx/CMakeFiles/duckx.dir/duckx_autogen/mocs_compilation.cpp.obj	6c4cc924a7452123
+15	204	7741319379275071	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/timestamp	777dc6a36ab2b640
+1148	1392	7741319389224636	3rdparty/duckx/libduckx.a	87dcc872bc41b7f7
+15	204	7741319379275071	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/mocs_compilation.cpp	777dc6a36ab2b640
+16778	18131	7741355907618843	ClassApp.exe	11c960d660642a15
+210	1146	7741319379845196	3rdparty/duckx/CMakeFiles/duckx.dir/src/duckx.cpp.obj	297e54bd15760b31
+214	729	7741319379885233	3rdparty/duckx/CMakeFiles/duckx.dir/thirdparty/zip/zip.c.obj	e4d798b3b46d9dcc
+50	3924	7741355777805939	ClassApp_autogen/timestamp	d71c230462130c9a
+3935	16777	7741355779199155	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+50	3924	7741355777805939	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+50	3924	7741355777805939	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+50	3924	7741355777805939	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+6250	10296	7741319440242795	CMakeFiles/ClassApp.dir/service.cpp.obj	b75e2e597273701b
+3954	7962	7741355779379208	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+3930	15313	7741355779149344	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
+3941	15368	7741355779259175	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
+3947	15365	7741355779319184	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
+3925	15386	7741355779099275	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+52	5121	7741358117670516	ClassApp_autogen/timestamp	d71c230462130c9a
+52	5121	7741358117670516	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+52	5121	7741358117670516	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+52	5121	7741358117670516	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+5142	9933	7741358119399219	CMakeFiles/ClassApp.dir/service.cpp.obj	b75e2e597273701b
+5164	10097	7741358119619273	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+5149	15746	7741358119469223	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
+5129	15891	7741358119269181	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
+5156	16317	7741358119539239	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
+5123	16538	7741358119211884	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+5135	17446	7741358119329187	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+17446	18790	7741358242432240	ClassApp.exe	11c960d660642a15

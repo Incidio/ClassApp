@@ -1,0 +1,5 @@
+set(__QT_DEPLOY_TARGET_duckx_FILE C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/libduckx.a)
+set(__QT_DEPLOY_TARGET_duckx_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_ClassApp_FILE C:/Users/salie/OneDrive/Documents/Start 3/ClassApp.exe)
+set(__QT_DEPLOY_TARGET_ClassApp_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_ClassApp_RUNTIME_DLLS C:/Qt/6.8.1/mingw_64/bin/Qt6Charts.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Pdf.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Concurrent.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6OpenGLWidgets.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Network.dll;C:/Qt/6.8.1/mingw_64/bin/Qt6Core.dll)
