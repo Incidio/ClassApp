@@ -1088,10 +1088,6 @@ void MainWindow::on_sortElement_clicked()
 }
 
 
-
-
-
-
 void MainWindow::on_CreateDate_triggered()
 {
     int columnCount = ui->treeWidget->columnCount();
