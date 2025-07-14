@@ -29,6 +29,7 @@
 
 #include "createchart.h"
 #include "redactingitem.h"
+#include "treewidgetcolumnmanager.h"
 
 #include "3rdparty/duckx/include/duckx.hpp"
 
@@ -100,29 +101,11 @@ private slots:
 
     void on_treeWidget_itemClicked(QTreeWidgetItem *item, int column);
 
-    void on_CreateDate_triggered();
-    void on_HideDate_triggered();
-
-    void on_CreateDescription_triggered();
-    void on_HideDescription_triggered();
-
-    void on_CreateTarget_triggered();
-    void on_HideTarget_triggered();
-
-    void on_CreateAuthor_triggered();
-    void on_HideAuthor_triggered();
-
-    QString extractSignature(const QString &pdfText);
-
-    void on_CreateDocumentType_triggered();
-    void on_HideDocumentType_triggered();
-
     void on_SphereChangeState_triggered();
     void on_openFileLocation_triggered();
 
     void on_hideButton_clicked();
     void on_showButton_clicked();
-
 
     void on_searchButton_pressed();
     void on_antiButton_pressed();
@@ -132,8 +115,9 @@ private slots:
 
     void on_CreateOrg_triggered();
     QString getLastLines(const QString& filePath, int lineCount);
-
     void on_HideOrg_triggered();
+
+    void on_CreateCheckBox_triggered();
 
 private:
     Ui::MainWindow *ui;

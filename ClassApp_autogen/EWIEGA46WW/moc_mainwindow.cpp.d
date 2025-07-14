@@ -102,10 +102,12 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_mainw
   C:/Qt/6.8.1/mingw_64/include/QtConcurrent/qtconcurrentthreadengine.h \
   C:/Qt/6.8.1/mingw_64/include/QtConcurrent/qtconcurrentversion.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QAbstractListModel \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QDeadlineTimer \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QEvent \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QEventLoop \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QFileInfo \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QHash \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QList \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QMap \
@@ -558,6 +560,7 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_mainw
   C:/Qt/6.8.1/mingw_64/include/QtPdf/qpdfselection.h \
   C:/Qt/6.8.1/mingw_64/include/QtPdf/qtpdfexports.h \
   C:/Qt/6.8.1/mingw_64/include/QtPdf/qtpdfglobal.h \
+  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QCheckBox \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QCommonStyle \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QDialog \
@@ -566,6 +569,7 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_mainw
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QFrame \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QGraphicsWidget \
+  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QGroupBox \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QLayout \
@@ -574,6 +578,7 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_mainw
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMenu \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QProgressDialog \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QScrollerProperties \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QTextEdit \
@@ -1063,6 +1068,7 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_mainw
   C:/Users/salie/OneDrive/Documents/Start\ 3/progressdialog.h \
   C:/Users/salie/OneDrive/Documents/Start\ 3/redactingitem.h \
   C:/Users/salie/OneDrive/Documents/Start\ 3/service.h \
+  C:/Users/salie/OneDrive/Documents/Start\ 3/treewidgetcolumnmanager.h \
   C:/Users/salie/vcpkg/installed/x64-windows/include/xlsxwriter.h \
   C:/Users/salie/vcpkg/installed/x64-windows/include/xlsxwriter/chart.h \
   C:/Users/salie/vcpkg/installed/x64-windows/include/xlsxwriter/chartsheet.h \

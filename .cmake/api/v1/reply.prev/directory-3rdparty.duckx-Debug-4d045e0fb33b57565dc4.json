@@ -1,0 +1,90 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"3rdparty/duckx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"3rdparty/duckx/libduckx.a"
+			],
+			"targetId" : "duckx::@39bf433610838ebad305",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/duckx",
+			"exportName" : "duckxConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "duckx::@39bf433610838ebad305",
+					"index" : 3
+				}
+			],
+			"paths" : 
+			[
+				"3rdparty/duckx/CMakeFiles/Export/7a4a6fdb5ecce73846bd34d18f059b71/duckxConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/duckx",
+			"paths" : 
+			[
+				"3rdparty/duckx/include/duckx.hpp",
+				"3rdparty/duckx/include/constants.hpp",
+				"3rdparty/duckx/include/duckxiterator.hpp",
+				"3rdparty/duckx/thirdparty/pugixml/pugixml.hpp",
+				"3rdparty/duckx/thirdparty/pugixml/pugiconfig.hpp",
+				"3rdparty/duckx/thirdparty/zip/zip.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rdparty/duckx",
+		"source" : "3rdparty/duckx"
+	}
+}

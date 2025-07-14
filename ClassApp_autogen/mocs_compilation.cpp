@@ -3,3 +3,4 @@
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_progressdialog.cpp"
 #include "EWIEGA46WW/moc_redactingitem.cpp"
+#include "EWIEGA46WW/moc_treewidgetcolumnmanager.cpp"

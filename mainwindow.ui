@@ -137,7 +137,7 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,0,1,0">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1,1">
         <property name="topMargin">
          <number>0</number>
         </property>
@@ -446,17 +446,6 @@
     <property name="title">
      <string>Дерево</string>
     </property>
-    <widget class="QMenu" name="menu_6">
-     <property name="title">
-      <string>Вставить/обновить колонку</string>
-     </property>
-     <addaction name="CreateDate"/>
-     <addaction name="CreateDescription"/>
-     <addaction name="CreateTarget"/>
-     <addaction name="CreateAuthor"/>
-     <addaction name="CreateDocumentType"/>
-     <addaction name="CreateOrg"/>
-    </widget>
     <widget class="QMenu" name="menu_7">
      <property name="title">
       <string>Удалить элементы...</string>
@@ -464,20 +453,8 @@
      <addaction name="action_7"/>
      <addaction name="action_8"/>
     </widget>
-    <widget class="QMenu" name="menu_8">
-     <property name="title">
-      <string>Скрыть колонку</string>
-     </property>
-     <addaction name="HideDescription"/>
-     <addaction name="HideDate"/>
-     <addaction name="HideTarget"/>
-     <addaction name="HideAuthor"/>
-     <addaction name="HideDocumentType"/>
-     <addaction name="HideOrg"/>
-    </widget>
     <addaction name="action_4"/>
-    <addaction name="menu_6"/>
-    <addaction name="menu_8"/>
+    <addaction name="CreateCheckBox"/>
     <addaction name="menu_7"/>
     <addaction name="action_9"/>
    </widget>
@@ -516,39 +493,6 @@
     <string>Отсортировать</string>
    </property>
   </action>
-  <action name="HideDescription">
-   <property name="text">
-    <string>Описание</string>
-   </property>
-  </action>
-  <action name="HideDate">
-   <property name="text">
-    <string>Дата создания</string>
-   </property>
-  </action>
-  <action name="CreateDate">
-   <property name="text">
-    <string>Вставить дату создания</string>
-   </property>
-  </action>
-  <action name="CreateDescription">
-   <property name="text">
-    <string>Вставить описание</string>
-   </property>
-  </action>
-  <action name="CreateTarget">
-   <property name="text">
-    <string>Вставить Кому</string>
-   </property>
-  </action>
-  <action name="CreateAuthor">
-   <property name="text">
-    <string>Вставить Подписал</string>
-   </property>
-   <property name="iconText">
-    <string>Вставить Подписал</string>
-   </property>
-  </action>
   <action name="openFileLocation">
    <property name="text">
     <string>Открыть локацию файлов</string>
@@ -559,34 +503,9 @@
     <string>Спрятать/Показать сферы</string>
    </property>
   </action>
-  <action name="HideTarget">
+  <action name="CreateCheckBox">
    <property name="text">
-    <string>Кому</string>
-   </property>
-  </action>
-  <action name="HideAuthor">
-   <property name="text">
-    <string>Подписал</string>
-   </property>
-  </action>
-  <action name="CreateDocumentType">
-   <property name="text">
-    <string>Вставить Тип Документа</string>
-   </property>
-  </action>
-  <action name="HideDocumentType">
-   <property name="text">
-    <string>Тип документа</string>
-   </property>
-  </action>
-  <action name="CreateOrg">
-   <property name="text">
-    <string>Вставить Организацию</string>
-   </property>
-  </action>
-  <action name="HideOrg">
-   <property name="text">
-    <string>Организации</string>
+    <string>Выбрать данные</string>
    </property>
   </action>
  </widget>

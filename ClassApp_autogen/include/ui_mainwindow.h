@@ -42,20 +42,9 @@ public:
     QAction *action_7;
     QAction *action_8;
     QAction *action_9;
-    QAction *HideDescription;
-    QAction *HideDate;
-    QAction *CreateDate;
-    QAction *CreateDescription;
-    QAction *CreateTarget;
-    QAction *CreateAuthor;
     QAction *openFileLocation;
     QAction *SphereChangeState;
-    QAction *HideTarget;
-    QAction *HideAuthor;
-    QAction *CreateDocumentType;
-    QAction *HideDocumentType;
-    QAction *CreateOrg;
-    QAction *HideOrg;
+    QAction *CreateCheckBox;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QHBoxLayout *searchLayout;
@@ -98,9 +87,7 @@ public:
     QMenu *menu_3;
     QMenu *menu_4;
     QMenu *menu_5;
-    QMenu *menu_6;
     QMenu *menu_7;
-    QMenu *menu_8;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -126,34 +113,12 @@ public:
         action_8->setObjectName("action_8");
         action_9 = new QAction(MainWindow);
         action_9->setObjectName("action_9");
-        HideDescription = new QAction(MainWindow);
-        HideDescription->setObjectName("HideDescription");
-        HideDate = new QAction(MainWindow);
-        HideDate->setObjectName("HideDate");
-        CreateDate = new QAction(MainWindow);
-        CreateDate->setObjectName("CreateDate");
-        CreateDescription = new QAction(MainWindow);
-        CreateDescription->setObjectName("CreateDescription");
-        CreateTarget = new QAction(MainWindow);
-        CreateTarget->setObjectName("CreateTarget");
-        CreateAuthor = new QAction(MainWindow);
-        CreateAuthor->setObjectName("CreateAuthor");
         openFileLocation = new QAction(MainWindow);
         openFileLocation->setObjectName("openFileLocation");
         SphereChangeState = new QAction(MainWindow);
         SphereChangeState->setObjectName("SphereChangeState");
-        HideTarget = new QAction(MainWindow);
-        HideTarget->setObjectName("HideTarget");
-        HideAuthor = new QAction(MainWindow);
-        HideAuthor->setObjectName("HideAuthor");
-        CreateDocumentType = new QAction(MainWindow);
-        CreateDocumentType->setObjectName("CreateDocumentType");
-        HideDocumentType = new QAction(MainWindow);
-        HideDocumentType->setObjectName("HideDocumentType");
-        CreateOrg = new QAction(MainWindow);
-        CreateOrg->setObjectName("CreateOrg");
-        HideOrg = new QAction(MainWindow);
-        HideOrg->setObjectName("HideOrg");
+        CreateCheckBox = new QAction(MainWindow);
+        CreateCheckBox->setObjectName("CreateCheckBox");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         sizePolicy.setHeightForWidth(centralwidget->sizePolicy().hasHeightForWidth());
@@ -260,7 +225,9 @@ public:
         horizontalLayout->setStretch(0, 1);
         horizontalLayout->setStretch(1, 1);
         horizontalLayout->setStretch(2, 1);
+        horizontalLayout->setStretch(3, 1);
         horizontalLayout->setStretch(4, 1);
+        horizontalLayout->setStretch(5, 1);
 
         verticalLayout->addLayout(horizontalLayout);
 
@@ -411,12 +378,8 @@ public:
         menu_4->setObjectName("menu_4");
         menu_5 = new QMenu(menubar);
         menu_5->setObjectName("menu_5");
-        menu_6 = new QMenu(menu_5);
-        menu_6->setObjectName("menu_6");
         menu_7 = new QMenu(menu_5);
         menu_7->setObjectName("menu_7");
-        menu_8 = new QMenu(menu_5);
-        menu_8->setObjectName("menu_8");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -429,24 +392,11 @@ public:
         menu_3->addAction(openFileLocation);
         menu_3->addAction(SphereChangeState);
         menu_5->addAction(action_4);
-        menu_5->addAction(menu_6->menuAction());
-        menu_5->addAction(menu_8->menuAction());
+        menu_5->addAction(CreateCheckBox);
         menu_5->addAction(menu_7->menuAction());
         menu_5->addAction(action_9);
-        menu_6->addAction(CreateDate);
-        menu_6->addAction(CreateDescription);
-        menu_6->addAction(CreateTarget);
-        menu_6->addAction(CreateAuthor);
-        menu_6->addAction(CreateDocumentType);
-        menu_6->addAction(CreateOrg);
         menu_7->addAction(action_7);
         menu_7->addAction(action_8);
-        menu_8->addAction(HideDescription);
-        menu_8->addAction(HideDate);
-        menu_8->addAction(HideTarget);
-        menu_8->addAction(HideAuthor);
-        menu_8->addAction(HideDocumentType);
-        menu_8->addAction(HideOrg);
 
         retranslateUi(MainWindow);
 
@@ -465,21 +415,9 @@ public:
         action_7->setText(QCoreApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\321\213\320\265", nullptr));
         action_8->setText(QCoreApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \320\262\321\201\320\265", nullptr));
         action_9->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\321\201\320\276\321\200\321\202\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
-        HideDescription->setText(QCoreApplication::translate("MainWindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
-        HideDate->setText(QCoreApplication::translate("MainWindow", "\320\224\320\260\321\202\320\260 \321\201\320\276\320\267\320\264\320\260\320\275\320\270\321\217", nullptr));
-        CreateDate->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\264\320\260\321\202\321\203 \321\201\320\276\320\267\320\264\320\260\320\275\320\270\321\217", nullptr));
-        CreateDescription->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\276\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
-        CreateTarget->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\232\320\276\320\274\321\203", nullptr));
-        CreateAuthor->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\237\320\276\320\264\320\277\320\270\321\201\320\260\320\273", nullptr));
-        CreateAuthor->setIconText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\237\320\276\320\264\320\277\320\270\321\201\320\260\320\273", nullptr));
         openFileLocation->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\320\272\321\200\321\213\321\202\321\214 \320\273\320\276\320\272\320\260\321\206\320\270\321\216 \321\204\320\260\320\271\320\273\320\276\320\262", nullptr));
         SphereChangeState->setText(QCoreApplication::translate("MainWindow", "\320\241\320\277\321\200\321\217\321\202\320\260\321\202\321\214/\320\237\320\276\320\272\320\260\320\267\320\260\321\202\321\214 \321\201\321\204\320\265\321\200\321\213", nullptr));
-        HideTarget->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\274\321\203", nullptr));
-        HideAuthor->setText(QCoreApplication::translate("MainWindow", "\320\237\320\276\320\264\320\277\320\270\321\201\320\260\320\273", nullptr));
-        CreateDocumentType->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\242\320\270\320\277 \320\224\320\276\320\272\321\203\320\274\320\265\320\275\321\202\320\260", nullptr));
-        HideDocumentType->setText(QCoreApplication::translate("MainWindow", "\320\242\320\270\320\277 \320\264\320\276\320\272\321\203\320\274\320\265\320\275\321\202\320\260", nullptr));
-        CreateOrg->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214 \320\236\321\200\320\263\320\260\320\275\320\270\320\267\320\260\321\206\320\270\321\216", nullptr));
-        HideOrg->setText(QCoreApplication::translate("MainWindow", "\320\236\321\200\320\263\320\260\320\275\320\270\320\267\320\260\321\206\320\270\320\270", nullptr));
+        CreateCheckBox->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \320\264\320\260\320\275\320\275\321\213\320\265", nullptr));
         seachEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\237\320\276\320\270\321\201\320\272 \320\277\320\276 [\321\202\320\265\321\200\320\274\320\270\320\275\321\203]", nullptr));
         searchButton->setText(QString());
         antiButton->setText(QString());
@@ -505,9 +443,7 @@ public:
         menu_3->setTitle(QCoreApplication::translate("MainWindow", "\320\241\321\204\320\265\321\200\321\213", nullptr));
         menu_4->setTitle(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\270\320\273\321\214", nullptr));
         menu_5->setTitle(QCoreApplication::translate("MainWindow", "\320\224\320\265\321\200\320\265\320\262\320\276", nullptr));
-        menu_6->setTitle(QCoreApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\321\214/\320\276\320\261\320\275\320\276\320\262\320\270\321\202\321\214 \320\272\320\276\320\273\320\276\320\275\320\272\321\203", nullptr));
         menu_7->setTitle(QCoreApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\321\213...", nullptr));
-        menu_8->setTitle(QCoreApplication::translate("MainWindow", "\320\241\320\272\321\200\321\213\321\202\321\214 \320\272\320\276\320\273\320\276\320\275\320\272\321\203", nullptr));
     } // retranslateUi
 
 };

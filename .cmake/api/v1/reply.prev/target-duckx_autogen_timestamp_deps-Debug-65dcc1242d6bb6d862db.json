@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"3rdparty/duckx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "duckx_autogen_timestamp_deps::@39bf433610838ebad305",
+	"isGeneratorProvided" : true,
+	"name" : "duckx_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "3rdparty/duckx",
+		"source" : "3rdparty/duckx"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

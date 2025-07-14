@@ -30,6 +30,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         progressdialog.h progressdialog.cpp
         createchart.h createchart.cpp createchart.ui
         redactingitem.h redactingitem.cpp redactingitem.ui
+        treewidgetcolumnmanager.h treewidgetcolumnmanager.cpp treewidgetcolumnmanager.ui
 
     )
 # Define target properties for Android with Qt 6 as:
