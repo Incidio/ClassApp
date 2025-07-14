@@ -1,20 +1,34 @@
-#pragma once
-
 #ifndef CREATECHART_H
 #define CREATECHART_H
 
 #include <QDialog>
-#include <QTreeWidget>
-#include <QMap>
-#include <QPair>
-#include <QChartView>
-#include <QtCharts>
 
-QT_BEGIN_NAMESPACE
+#include <QMainWindow>
+#include <QHeaderView>
+#include <QTextEdit>
+#include <QListWidget>
+#include <QMenu>
+#include <QToolButton>
+#include <QFrame>
+#include <QTreeWidget>
+
+//#include <QtCharts>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QChart>
+#include <QtCharts/QChartView>
+#include <QtCharts/QBarCategoryAxis>
+#include <QtCharts/QValueAxis>
+
+#include <QtCharts/QPieSeries>
+#include <QStackedBarSeries>
+
+#include <QtCharts/QLegend>
+#include <QtCharts/QLegendMarker>
+
 namespace Ui {
 class CreateChart;
 }
-QT_END_NAMESPACE
 
 class CreateChart : public QDialog
 {
@@ -24,50 +38,21 @@ public:
     explicit CreateChart(QWidget *parent = nullptr);
     ~CreateChart();
 
-    // Привязка внешнего дерева с данными
     void setTreeWidget(QTreeWidget *tree);
+    void setupChart(QString chartType);
+    bool columnWithNameExists(QTreeWidget *treeWidget, const QString &columnName);
 
 private slots:
-    // Обработка выбора типа диаграммы (столбчатая, круговая и т.п.)
-    void on_chartTypeComboBox_currentIndexChanged(int index);
     void on_createChart_clicked();
 
-    // Обновление фильтра при смене столбцов
-    void on_firstColumnComboBox_currentIndexChanged(int index);
-    void on_secondColumnComboBox_currentIndexChanged(int index);
+    void on_chartTypeComboBox_currentIndexChanged(int index);
+
+    void on_classTypeCombo_currentIndexChanged(int index);
 
 private:
     Ui::CreateChart *ui;
+    QTreeWidget *AtreeWidget;
 
-    // Входное дерево с данными
-    QTreeWidget *AtreeWidget = nullptr;
-
-    // Обработка построения диаграммы
-    void setupChart(const QString &chartType);
-
-    // Проверка существования колонки по имени
-    bool columnWithNameExists(const QString &columnName) const;
-
-    // Получение индекса колонки по имени
-    int getColumnIndexByName(const QString &columnName) const;
-
-    // Очистка лэйаута
-    void clearLayout(QLayout *layout, bool deleteWidgets = true);
-
-    // Сбор данных: группировка по (X, Y) с учётом родителя
-    QMap<QString, QMap<QString, QMap<QString, int>>> collectGroupedData(
-        const QString &xColumn, const QString &yColumn, const QString &filterValue = "Для всех"
-        ) const;
-
-    // Обновление доступных колонок при запуске
-    void populateColumnSelectors();
-
-    // Обновление комбобокса фильтров
-    void updateFilterValues(const QString &columnName);
-
-    // Унификация данных по категориям
-    void ensureAllYValuesPresent(QMap<QString, QMap<QString, QMap<QString, int>>> &data);
 };
-
 
 #endif // CREATECHART_H

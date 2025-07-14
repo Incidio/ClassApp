@@ -1,0 +1,71 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"3rdparty/duckx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "duckx_autogen_timestamp_deps::@39bf433610838ebad305"
+		}
+	],
+	"id" : "duckx_autogen::@39bf433610838ebad305",
+	"isGeneratorProvided" : true,
+	"name" : "duckx_autogen",
+	"paths" : 
+	{
+		"build" : "3rdparty/duckx",
+		"source" : "3rdparty/duckx"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/CMakeFiles/duckx_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/CMakeFiles/duckx_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

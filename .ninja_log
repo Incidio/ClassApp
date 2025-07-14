@@ -5,67 +5,70 @@
 15	204	7741319379275071	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/timestamp	777dc6a36ab2b640
 15	204	7741319379275071	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/mocs_compilation.cpp	777dc6a36ab2b640
 1148	1392	7741319389224636	3rdparty/duckx/libduckx.a	87dcc872bc41b7f7
-9536	11023	7742171138660210	ClassApp.exe	e7cc1b36fadf3154
+18830	20244	7742213602387277	ClassApp.exe	e7cc1b36fadf3154
 210	1146	7741319379845196	3rdparty/duckx/CMakeFiles/duckx.dir/src/duckx.cpp.obj	297e54bd15760b31
 214	729	7741319379885233	3rdparty/duckx/CMakeFiles/duckx.dir/thirdparty/zip/zip.c.obj	e4d798b3b46d9dcc
-47	363	7742171043777049	ClassApp_autogen/timestamp	d71c230462130c9a
-47	363	7742171043777049	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-365	9536	7742171046954022	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
-47	363	7742171043777049	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
-47	363	7742171043777049	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-5142	9933	7741358119399219	CMakeFiles/ClassApp.dir/service.cpp.obj	b75e2e597273701b
-374	4096	7742171047043979	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-4241	16856	7742165117762695	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
-4252	16860	7742165117872727	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
-369	8494	7742171046994101	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-4237	17332	7742165117722722	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
-380	4937	7742171047103995	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
-49	369	7742172255226834	ClassApp_autogen/timestamp	d71c230462130c9a
-49	369	7742172255226834	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-49	369	7742172255226834	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
-49	369	7742172255226834	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-381	3741	7742172258543833	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-387	4706	7742172258603837	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
-376	8372	7742172258493801	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-371	9460	7742172258433780	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
-9460	10904	7742172349334720	ClassApp.exe	e7cc1b36fadf3154
-48	361	7742173104182850	ClassApp_autogen/timestamp	d71c230462130c9a
-48	361	7742173104182850	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-48	361	7742173104182850	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
-48	361	7742173104182850	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-372	3774	7742173107426350	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-378	4747	7742173107476383	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
-367	8300	7742173107376366	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-362	9366	7742173107326481	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
-9367	10782	7742173197366598	ClassApp.exe	e7cc1b36fadf3154
-60	406	7742209480795167	ClassApp_autogen/timestamp	d71c230462130c9a
-60	406	7742209480795167	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-60	406	7742209480795167	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
-60	406	7742209480795167	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-419	3683	7742209484380637	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-424	4281	7742209484430662	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
-413	7746	7742209484330634	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-408	8726	7742209484270623	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
-8726	10176	7742209567456768	ClassApp.exe	e7cc1b36fadf3154
-28	3830	7742212643472122	ClassApp_autogen/timestamp	d71c230462130c9a
-28	3830	7742212643472122	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-28	3830	7742212643472122	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
-28	3830	7742212643472122	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
-3859	8334	7742212644952471	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-3866	9654	7742212645022491	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
-3847	15321	7742212644832582	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
-3836	15325	7742212644732412	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
-3853	15857	7742212644892454	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-3831	16047	7742212644672391	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
 58	4425	7742213457093456	ClassApp_autogen/timestamp	d71c230462130c9a
 58	4425	7742213457093456	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+4435	18830	7742213458432502	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
 58	4425	7742213457093456	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
 58	4425	7742213457093456	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+5142	9933	7741358119399219	CMakeFiles/ClassApp.dir/service.cpp.obj	b75e2e597273701b
 4452	8842	7742213458602531	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
-4467	10200	7742213458752570	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
 4430	16542	7742213458382620	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
-4426	16962	7742213458342506	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
 4440	17340	7742213458482530	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
 4445	17780	7742213458532539	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
-4435	18830	7742213458432502	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
-18830	20244	7742213602387277	ClassApp.exe	e7cc1b36fadf3154
+4426	16962	7742213458342506	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+4467	10200	7742213458752570	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
+37	276	7742263054783428	3rdparty/duckx/duckx_autogen/timestamp	777dc6a36ab2b640
+37	276	7742263054783428	3rdparty/duckx/duckx_autogen/mocs_compilation.cpp	777dc6a36ab2b640
+37	276	7742263054783428	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/timestamp	777dc6a36ab2b640
+37	276	7742263054783428	C:/Users/salie/OneDrive/Documents/Start 3/3rdparty/duckx/duckx_autogen/mocs_compilation.cpp	777dc6a36ab2b640
+330	702	7742263055813682	3rdparty/duckx/CMakeFiles/duckx.dir/duckx_autogen/mocs_compilation.cpp.obj	6c4cc924a7452123
+338	1162	7742263055893682	3rdparty/duckx/CMakeFiles/duckx.dir/thirdparty/zip/zip.c.obj	e4d798b3b46d9dcc
+334	1830	7742263055853691	3rdparty/duckx/CMakeFiles/duckx.dir/src/duckx.cpp.obj	297e54bd15760b31
+1830	2162	7742263070813412	3rdparty/duckx/libduckx.a	87dcc872bc41b7f7
+2162	9461	7742263145814374	ClassApp_autogen/timestamp	d71c230462130c9a
+2162	9461	7742263145814374	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+2162	9461	7742263145814374	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+2162	9461	7742263145814374	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+9478	15203	7742263147294686	CMakeFiles/ClassApp.dir/service.cpp.obj	b75e2e597273701b
+9498	15399	7742263147494743	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+9506	16758	7742263147574761	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
+9466	23590	7742263147174709	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
+9484	24465	7742263147354713	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
+9491	24919	7742263147424736	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
+9462	25911	7742263147134692	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+9472	26127	7742263147234698	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+26128	28095	7742263313792061	ClassApp.exe	e7cc1b36fadf3154
+76	4910	7742264826746599	ClassApp_autogen/timestamp	d71c230462130c9a
+76	4910	7742264826746599	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+76	4910	7742264826746599	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+76	4910	7742264826746599	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+4939	9722	7742264828304155	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+4944	10964	7742264828354157	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
+4916	16485	7742264828084097	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
+4927	16577	7742264828194133	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
+4932	16913	7742264828244152	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
+4911	17062	7742264828034093	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+4921	17805	7742264828134112	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+17805	19220	7742264956971890	ClassApp.exe	e7cc1b36fadf3154
+52	4232	7742265963591001	ClassApp_autogen/timestamp	d71c230462130c9a
+52	4232	7742265963591001	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+52	4232	7742265963591001	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+52	4232	7742265963591001	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+4263	8629	7742265965137612	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+4270	9758	7742265965207620	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
+4239	13202	7742265964897538	CMakeFiles/ClassApp.dir/main.cpp.obj	b633bb9a5beec082
+4251	13232	7742265965017572	CMakeFiles/ClassApp.dir/progressdialog.cpp.obj	5141996acba0290c
+4234	13884	7742265964837517	CMakeFiles/ClassApp.dir/ClassApp_autogen/mocs_compilation.cpp.obj	3bc258053efca800
+4244	14489	7742265964947557	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+44	374	7742270102886193	ClassApp_autogen/timestamp	d71c230462130c9a
+44	374	7742270102886193	ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+44	374	7742270102886193	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/timestamp	d71c230462130c9a
+44	374	7742270102886193	C:/Users/salie/OneDrive/Documents/Start 3/ClassApp_autogen/mocs_compilation.cpp	d71c230462130c9a
+385	3868	7742270106284479	CMakeFiles/ClassApp.dir/redactingitem.cpp.obj	357cf4de7e59479a
+380	4748	7742270106244476	CMakeFiles/ClassApp.dir/createchart.cpp.obj	40de8134c2b46f59
+390	4789	7742270106344496	CMakeFiles/ClassApp.dir/treewidgetcolumnmanager.cpp.obj	70e7508769fac8db
+375	8941	7742270106194606	CMakeFiles/ClassApp.dir/mainwindow.cpp.obj	cf799e37192cf278
+8941	10309	7742270191851152	ClassApp.exe	e7cc1b36fadf3154

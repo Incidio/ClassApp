@@ -89,14 +89,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="firstColumnComboBox">
+        <widget class="QComboBox" name="classTypeCombo">
          <property name="placeholderText">
           <string> Колона...</string>
          </property>
         </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="secondColumnComboBox"/>
        </item>
        <item>
         <widget class="QComboBox" name="authorCombo">

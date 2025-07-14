@@ -4,7 +4,9 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_progr
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QAbstractBarSeries \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QAbstractSeries \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QAreaSeries \
+  C:/Qt/6.8.1/mingw_64/include/QtCharts/QBarCategoryAxis \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QBarModelMapper \
+  C:/Qt/6.8.1/mingw_64/include/QtCharts/QBarSeries \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QBarSet \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QBoxPlotModelMapper \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QBoxPlotSeries \
@@ -19,6 +21,7 @@ C:/Users/salie/OneDrive/Documents/Start\ 3/ClassApp_autogen/EWIEGA46WW/moc_progr
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QPieModelMapper \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QPieSeries \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QPieSlice \
+  C:/Qt/6.8.1/mingw_64/include/QtCharts/QStackedBarSeries \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QValueAxis \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QXYModelMapper \
   C:/Qt/6.8.1/mingw_64/include/QtCharts/QXYSeries \

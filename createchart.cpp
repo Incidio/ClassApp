@@ -1,10 +1,6 @@
 #include "createchart.h"
 #include "ui_createchart.h"
 
-#include <QtCharts>
-#include <QComboBox>
-
-
 CreateChart::CreateChart(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::CreateChart)
@@ -12,12 +8,9 @@ CreateChart::CreateChart(QWidget *parent)
     ui->setupUi(this);
     setWindowTitle("Анализ данных");
 
-    ui->chartTypeComboBox->addItems({
-        "Столбчатая диаграмма",
-        "Столбчатая диаграмма с накоплением",
-        "Круговая диаграмма"
-    });
-
+    ui->chartTypeComboBox->addItem("Столбчатая диаграмма");
+    ui->chartTypeComboBox->addItem("Столбчатая диаграмма с накоплением");
+    ui->chartTypeComboBox->addItem("Круговая диаграмма");
     ui->authorCombo->addItem("Для всех");
     ui->authorCombo->setCurrentIndex(0);
 }
@@ -25,38 +18,29 @@ CreateChart::CreateChart(QWidget *parent)
 CreateChart::~CreateChart()
 {
     delete ui;
+    delete AtreeWidget;
 }
 
 void CreateChart::setTreeWidget(QTreeWidget *tree)
 {
     AtreeWidget = tree;
-    populateColumnSelectors();
+
+    if (columnWithNameExists(AtreeWidget, "Подписал")){
+        ui->classTypeCombo->addItem("Подписал");}
+    if (columnWithNameExists(AtreeWidget, "Кому")){
+        ui->classTypeCombo->addItem("Кому");}
+
 }
 
-void CreateChart::populateColumnSelectors()
+bool CreateChart::columnWithNameExists(QTreeWidget *treeWidget, const QString &columnName)
 {
-    if (!AtreeWidget) return;
-
-    ui->firstColumnComboBox->clear();
-    ui->secondColumnComboBox->clear();
-
-    QTreeWidgetItem *header = AtreeWidget->headerItem();
-    int columnCount = AtreeWidget->columnCount();
-    for (int i = 0; i < columnCount; ++i) {
-        QString name = header->text(i);
-        ui->firstColumnComboBox->addItem(name);
-        ui->secondColumnComboBox->addItem(name);
+    QTreeWidgetItem *header = treeWidget->headerItem();
+    if (!header) {
+        return false;
     }
-    ui->authorCombo->clear();
-    ui->authorCombo->addItem("Для всех");
-}
 
-bool CreateChart::columnWithNameExists(const QString &columnName) const
-{
-    QTreeWidgetItem *header = AtreeWidget->headerItem();
-    if (!header) return false;
-
-    for (int i = 0; i < AtreeWidget->columnCount(); ++i) {
+    int columnCount = treeWidget->columnCount();
+    for (int i = 0; i < columnCount; ++i) {
         if (header->text(i) == columnName) {
             return true;
         }
@@ -64,155 +48,243 @@ bool CreateChart::columnWithNameExists(const QString &columnName) const
     return false;
 }
 
-int CreateChart::getColumnIndexByName(const QString &columnName) const
+void clearLayout(QLayout* layout, bool deleteWidgets = true)
 {
-    QTreeWidgetItem *header = AtreeWidget->headerItem();
-    for (int i = 0; i < AtreeWidget->columnCount(); ++i) {
-        if (header->text(i) == columnName) {
-            return i;
+    if (!layout)
+        return;
+    while (QLayoutItem* item = layout->takeAt(0))
+    {
+        if (deleteWidgets)
+        {
+            if (QWidget* widget = item->widget())
+                widget->deleteLater();
         }
-    }
-    return -1;
-}
-
-void CreateChart::clearLayout(QLayout *layout, bool deleteWidgets)
-{
-    while (QLayoutItem *item = layout->takeAt(0)) {
-        if (deleteWidgets && item->widget())
-            item->widget()->deleteLater();
-        if (item->layout())
-            clearLayout(item->layout(), deleteWidgets);
+        if (QLayout* childLayout = item->layout())
+            clearLayout(childLayout, deleteWidgets);
         delete item;
     }
 }
 
-QMap<QString, QMap<QString, QMap<QString, int>>> CreateChart::collectGroupedData(
-    const QString &xColumn, const QString &yColumn, const QString &filterValue) const
-{
-    QMap<QString, QMap<QString, QMap<QString, int>>> data;
-    int xIndex = getColumnIndexByName(xColumn);
-    int yIndex = getColumnIndexByName(yColumn);
-    if (xIndex == -1 || yIndex == -1) return data;
-
-    for (int i = 0; i < AtreeWidget->topLevelItemCount(); ++i) {
-        QTreeWidgetItem *parent = AtreeWidget->topLevelItem(i);
-        QString sphere = parent->text(0);
-
-        for (int j = 0; j < parent->childCount(); ++j) {
-            QTreeWidgetItem *child = parent->child(j);
-            QString xValue = child->text(xIndex).simplified();
-            QString yValue = child->text(yIndex).simplified();
-
-            if (xValue.isEmpty()) xValue = "Пусто";
-            if (yValue.isEmpty()) yValue = "Пусто";
-
-            if (filterValue == "Для всех" || xValue == filterValue || yValue == filterValue) {
-                data[sphere][xValue][yValue]++;
-            }
+void ensureAllNamesInClasses(QMap<QString, QMap<QString, int>>& data) {
+    QSet<QString> allNames;
+    for (const auto& classData : data) {
+        for (const auto& name : classData.keys()) {
+            allNames.insert(name);
         }
     }
-    return data;
-}
 
-void CreateChart::ensureAllYValuesPresent(QMap<QString, QMap<QString, QMap<QString, int>>> &data)
-{
-    QSet<QString> allY;
-    for (const auto &sphere : data.keys()) {
-        for (const auto &x : data[sphere].keys()) {
-            const auto &yKeys = data[sphere][x].keys();
-            allY.unite(QSet<QString>(yKeys.begin(), yKeys.end()));
-        }
-    }
-    for (auto &sphereData : data) {
-        for (auto &xData : sphereData) {
-            for (const auto &yVal : allY) {
-                if (!xData.contains(yVal))
-                    xData[yVal] = 0;
+    for (auto it = data.begin(); it != data.end(); ++it) {
+        QMap<QString, int>& classData = it.value();
+        for (const auto& name : allNames) {
+            if (!classData.contains(name)) {
+                classData[name] = 0;
             }
         }
     }
 }
 
-void CreateChart::on_chartTypeComboBox_currentIndexChanged(int index)
-{
-    ui->authorCombo->clear();
-    ui->authorCombo->addItem("Для всех");
-}
+void CreateChart::setupChart(QString name){
 
-void CreateChart::on_firstColumnComboBox_currentIndexChanged(int index)
-{
-    updateFilterValues(ui->firstColumnComboBox->currentText());
-}
+    clearLayout(ui->ChartPlace);
 
-void CreateChart::on_secondColumnComboBox_currentIndexChanged(int index)
-{
-    updateFilterValues(ui->secondColumnComboBox->currentText());
-}
+    if (name == "Столбчатая диаграмма")
+    {
 
-void CreateChart::updateFilterValues(const QString &columnName)
-{
-    int columnIndex = getColumnIndexByName(columnName);
-    if (columnIndex == -1) return;
+        QString selectedColumn = ui->classTypeCombo->currentText();
 
-    QSet<QString> uniqueValues;
-    for (int i = 0; i < AtreeWidget->topLevelItemCount(); ++i) {
-        QTreeWidgetItem *parent = AtreeWidget->topLevelItem(i);
-        for (int j = 0; j < parent->childCount(); ++j) {
-            QString val = parent->child(j)->text(columnIndex).simplified();
-            if (!val.isEmpty()) uniqueValues.insert(val);
+        int column = AtreeWidget->columnCount();
+        int index = -1;
+        QHeaderView* header = AtreeWidget->header();
+
+        for (int i = 0; i <column ; i++)
+        {
+            QString justChecking = header->model()->headerData(i, Qt::Horizontal).toString();
+
+            if (justChecking == selectedColumn)
+            {
+                index = i;
+                break;
+            }
         }
-    }
+        column = index;
+        if (index == -1) return;
 
-    ui->authorCombo->clear();
-    ui->authorCombo->addItem("Для всех");
-    for (const QString &val : uniqueValues)
-        ui->authorCombo->addItem(val);
-}
+        QString selectedValue = ui->authorCombo->currentText();
 
-void CreateChart::on_createChart_clicked()
-{
-    if (!AtreeWidget) return;
+        QMap<QString, QMap<QString, int>> data;
+        for (int i = 0; i < AtreeWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *parent = AtreeWidget->topLevelItem(i);
+            QString parentName = parent->text(0);
 
-    QString chartType = ui->chartTypeComboBox->currentText();
-    setupChart(chartType);
-}
+            for (int j = 0; j < parent->childCount(); ++j) {
+                QTreeWidgetItem *child = parent->child(j);
+                QString key = child->text(column);
+                key.remove(' ');
+                key.remove("\r");
+                key.remove("\n");
+                if (key == "") key = "Пусто";
 
-void CreateChart::setupChart(const QString &chartType)
-{
-    //clearLayout(ui->ChartPlace);
+                //data[parentName][key]++;
 
-    QString xColumn = ui->firstColumnComboBox->currentText();
-    QString yColumn = ui->secondColumnComboBox->currentText();
-    QString filter = ui->authorCombo->currentText();
 
-    auto data = collectGroupedData(xColumn, yColumn, filter);
-    ensureAllYValuesPresent(data);
+                if (selectedValue == "Для всех")
+                    data[parentName][key]++;
+                else
+                {
+                    if (key == selectedValue)
+                        data[parentName][key]++;
+                }
 
-    if (chartType == "Столбчатая диаграмма") {
+            }
+        }
+
+        QString output;
+        ui->textEdit->clear();
+        for (auto outerIt = data.begin(); outerIt != data.end(); ++outerIt) {
+            QString parentKey = outerIt.key();
+            output += QString("Сфера: %1\n").arg(parentKey);
+
+            for (auto innerIt = outerIt.value().begin(); innerIt != outerIt.value().end(); ++innerIt) {
+                QString childKey = innerIt.key();
+                int value = innerIt.value();
+                output += QString("    %1: %2\n").arg(childKey).arg(value);
+            }
+
+            output += "\n";
+        }
+        ui->textEdit->append(output);
+
+        // Много мыслей на данном этапе происходит //
+        ensureAllNamesInClasses(data);
+
         QChart *chart = new QChart();
-        chart->setTitle(QString("%1 по %2 (фильтр: %3)").arg(yColumn, xColumn, filter));
+        chart->setTitle(QString("Столбцовая диаграмма %1").arg(selectedColumn));
         chart->setAnimationOptions(QChart::SeriesAnimations);
 
         QBarSeries *series = new QBarSeries();
-        QSet<QString> allX;
+        QStringList categories;
 
-        for (const auto &sphere : data.keys()) {
-            QBarSet *barSet = new QBarSet(sphere);
-            for (const auto &x : data[sphere].keys()) {
-                int sum = 0;
-                for (const auto &y : data[sphere][x].keys()) {
-                    sum += data[sphere][x][y];
+        for (auto parentIt = data.begin(); parentIt != data.end(); ++parentIt) {
+            QBarSet *barSet = new QBarSet(parentIt.key());
+            for (auto keyIt = parentIt.value().begin(); keyIt != parentIt.value().end(); ++keyIt) {
+                *barSet << keyIt.value();
+                if (!categories.contains(keyIt.key())) {
+                    categories << keyIt.key();
                 }
-                *barSet << sum;
-                allX.insert(x);
             }
             series->append(barSet);
         }
 
-        chart->addSeries(series);  // Важно: ДО добавления осей и attachAxis
+        chart->addSeries(series);
 
+        // Add axes
         QBarCategoryAxis *axisX = new QBarCategoryAxis();
-        axisX->append(QStringList(allX.begin(), allX.end()));
+        axisX->append(categories);
+        chart->addAxis(axisX, Qt::AlignBottom);
+        series->attachAxis(axisX);
+
+        QValueAxis *axisY = new QValueAxis();
+        chart->addAxis(axisY, Qt::AlignLeft);
+        axisY->setTitleText("Количество");
+        series->attachAxis(axisY);
+
+        chart->legend()->setAlignment(Qt::AlignTop);
+        chart->legend()->setMarkerShape(QLegend::MarkerShapeRectangle);
+
+        QChartView *chartView = new QChartView(chart);
+        chartView->setRenderHint(QPainter::Antialiasing);
+        chartView->setRubberBand(QChartView::RectangleRubberBand);
+
+        ui->ChartPlace->addWidget(chartView);
+
+        ui->authorCombo->clear();
+        ui->authorCombo->addItem("Для всех");
+        ui->authorCombo->setCurrentIndex(0);
+        ui->authorCombo->addItems(categories);
+
+    }
+
+    if (name == "Столбчатая диаграмма с накоплением")
+    {
+        QString selectedColumn = ui->classTypeCombo->currentText();
+
+        int column = AtreeWidget->columnCount();
+        int index = -1;
+        QHeaderView* header = AtreeWidget->header();
+
+        for (int i = 0; i <column ; i++)
+        {
+            QString justChecking = header->model()->headerData(i, Qt::Horizontal).toString();
+
+            if (justChecking == selectedColumn)
+            {
+                index = i;
+                break;
+            }
+        }
+        column = index;
+        if (index == -1) return;
+
+        QMap<QString, QMap<QString, int>> data; // parent -> (category -> count)
+        for (int i = 0; i < AtreeWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *parentItem = AtreeWidget->topLevelItem(i);
+            QString parentName = parentItem->text(0);
+
+            for (int j = 0; j < parentItem->childCount(); ++j) {
+                QTreeWidgetItem *childItem = parentItem->child(j);
+                QString category = childItem->text(column);
+                category = category.simplified();
+                if (category.isEmpty()) {
+                    category = "Пусто";
+                }
+                data[parentName][category]++;
+            }
+        }
+
+        QStringList categories; // X-axis categories
+        for (const auto &parentName : data.keys()) {
+            for (const auto &category : data[parentName].keys()) {
+                if (!categories.contains(category)) {
+                    categories << category;
+                }
+            }
+        }
+
+        QString output;
+        ui->textEdit->clear();
+        for (auto outerIt = data.begin(); outerIt != data.end(); ++outerIt) {
+            QString parentKey = outerIt.key();
+            output += QString("Сфера: %1\n").arg(parentKey);
+
+            for (auto innerIt = outerIt.value().begin(); innerIt != outerIt.value().end(); ++innerIt) {
+                QString childKey = innerIt.key();
+                int value = innerIt.value();
+                output += QString("    %1: %2\n").arg(childKey).arg(value);
+            }
+
+            output += "\n";
+        }
+        ui->textEdit->append(output);
+
+
+
+        QStackedBarSeries *series = new QStackedBarSeries();
+        for (const auto &category : categories) {
+            QBarSet *barSet = new QBarSet(category);
+            for (const auto &parentName : data.keys()) {
+                *barSet << data[parentName].value(category, 0); // Default to 0 if category doesn't exist
+            }
+            series->append(barSet);
+        }
+
+        QChart *chart = new QChart();
+        chart->addSeries(series);
+        chart->setTitle(QString("Столбчатая диаграмма с накоплением для %1").arg(selectedColumn));
+        chart->setAnimationOptions(QChart::SeriesAnimations);
+
+        // Configure axes
+        QBarCategoryAxis *axisX = new QBarCategoryAxis();
+        axisX->append(data.keys());
         chart->addAxis(axisX, Qt::AlignBottom);
         series->attachAxis(axisX);
 
@@ -224,10 +296,127 @@ void CreateChart::setupChart(const QString &chartType)
         chart->legend()->setVisible(true);
         chart->legend()->setAlignment(Qt::AlignBottom);
 
+        // Display the chart in the layout
         QChartView *chartView = new QChartView(chart);
         chartView->setRenderHint(QPainter::Antialiasing);
+
         ui->ChartPlace->addWidget(chartView);
     }
 
-    // Здесь можно добавить другие типы графиков при необходимости
+    if (name == "Круговая диаграмма")
+    {
+        QString selectedColumn = ui->classTypeCombo->currentText();
+
+        int column = AtreeWidget->columnCount();
+        int index = -1;
+        QHeaderView* header = AtreeWidget->header();
+
+        for (int i = 0; i <column ; i++)
+        {
+            QString justChecking = header->model()->headerData(i, Qt::Horizontal).toString();
+
+            if (justChecking == selectedColumn)
+            {
+                index = i;
+                break;
+            }
+        }
+        column = index;
+        if (index == -1) return;
+
+
+        QMap<QString, int> data;
+        for (int i = 0; i < AtreeWidget->topLevelItemCount(); ++i) {
+            QTreeWidgetItem *parent = AtreeWidget->topLevelItem(i);
+
+            for (int j = 0; j < parent->childCount(); ++j) {
+                QTreeWidgetItem *child = parent->child(j);
+                QString key = child->text(column);
+                key.remove(' ');
+                key.remove("\r");
+                key.remove("\n");
+                data[key]++;
+            }
+        }
+
+        QString output;
+        ui->textEdit->clear();
+        for (auto it = data.begin(); it != data.end(); ++it) {
+            QString key = it.key();
+            int value = it.value();
+            output += QString("%1: %2\n").arg(key).arg(value);
+        }
+        ui->textEdit->append(output);
+
+
+        QPieSeries *series = new QPieSeries();
+        for (auto it = data.begin(); it != data.end(); ++it) {
+            series->append(it.key(), it.value());
+        }
+
+        auto slices = series->slices();
+        for (QPieSlice *slice : slices) {
+            slice->setLabel(slice->label() + ": " + QString::number(slice->value()));
+        }
+
+        QChart *chart = new QChart();
+        chart->addSeries(series);
+        chart->setTitle(QString("Круговая диаграмма %1").arg(selectedColumn));
+        chart->setAnimationOptions(QChart::SeriesAnimations);
+
+        // Enable and align the legend
+        chart->legend()->setVisible(true);
+        chart->legend()->setAlignment(Qt::AlignLeft);
+
+        // Изменить легенду к виду "Category: Value"
+
+        const QList<QLegendMarker *> legendMarkers = chart->legend()->markers(series);
+        for (int i = 0; i < legendMarkers.size(); ++i) {
+            auto marker = legendMarkers.at(i);
+            if (marker->type() == QLegendMarker::LegendMarkerTypePie) {
+                QString category = slices.at(i)->label().split(":").first();
+                QString value = QString::number(slices.at(i)->value());
+                marker->setLabel(category + ": " + value);
+            }
+        }
+
+        QChartView *chartView = new QChartView(chart);
+        chartView->setRenderHint(QPainter::Antialiasing);
+
+        ui->ChartPlace->addWidget(chartView);
+
+    }
+
 }
+
+void CreateChart::on_createChart_clicked()
+{
+    if (!AtreeWidget)
+        return;
+
+    QString chartType = "";
+    chartType = ui->chartTypeComboBox->currentText();
+    if (chartType != "")
+    {
+        setupChart(chartType);
+    }
+
+
+}
+
+
+void CreateChart::on_chartTypeComboBox_currentIndexChanged(int index)
+{
+    ui->authorCombo->clear();
+    ui->authorCombo->addItem("Для всех");
+    ui->authorCombo->setCurrentIndex(0);
+}
+
+
+void CreateChart::on_classTypeCombo_currentIndexChanged(int index)
+{
+    ui->authorCombo->clear();
+    ui->authorCombo->addItem("Для всех");
+    ui->authorCombo->setCurrentIndex(0);
+}
+

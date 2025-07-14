@@ -31,8 +31,7 @@ public:
     QVBoxLayout *verticalLayout;
     QVBoxLayout *verticalLayout_2;
     QComboBox *chartTypeComboBox;
-    QComboBox *firstColumnComboBox;
-    QComboBox *secondColumnComboBox;
+    QComboBox *classTypeCombo;
     QComboBox *authorCombo;
     QTextEdit *textEdit;
     QPushButton *createChart;
@@ -77,15 +76,10 @@ public:
 
         verticalLayout_2->addWidget(chartTypeComboBox);
 
-        firstColumnComboBox = new QComboBox(CreateChart);
-        firstColumnComboBox->setObjectName("firstColumnComboBox");
+        classTypeCombo = new QComboBox(CreateChart);
+        classTypeCombo->setObjectName("classTypeCombo");
 
-        verticalLayout_2->addWidget(firstColumnComboBox);
-
-        secondColumnComboBox = new QComboBox(CreateChart);
-        secondColumnComboBox->setObjectName("secondColumnComboBox");
-
-        verticalLayout_2->addWidget(secondColumnComboBox);
+        verticalLayout_2->addWidget(classTypeCombo);
 
         authorCombo = new QComboBox(CreateChart);
         authorCombo->setObjectName("authorCombo");
@@ -122,7 +116,7 @@ public:
     {
         CreateChart->setWindowTitle(QCoreApplication::translate("CreateChart", "\320\236\320\272\320\275\320\276 \321\201 \321\202\320\260\320\261\320\273\320\270\321\206\320\260\320\274\320\270", nullptr));
         chartTypeComboBox->setPlaceholderText(QCoreApplication::translate("CreateChart", " \320\242\320\270\320\277 \320\264\320\270\320\260\320\263\321\200\320\260\320\274\320\274\321\213..", nullptr));
-        firstColumnComboBox->setPlaceholderText(QCoreApplication::translate("CreateChart", " \320\232\320\276\320\273\320\276\320\275\320\260...", nullptr));
+        classTypeCombo->setPlaceholderText(QCoreApplication::translate("CreateChart", " \320\232\320\276\320\273\320\276\320\275\320\260...", nullptr));
         authorCombo->setPlaceholderText(QCoreApplication::translate("CreateChart", "\320\224\320\273\321\217 \320\262\321\201\320\265\321\205", nullptr));
         createChart->setText(QCoreApplication::translate("CreateChart", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214", nullptr));
     } // retranslateUi

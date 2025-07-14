@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9cd0b5f2e7b226047743.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "3rdparty/duckx",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rdparty.duckx-Debug-4d045e0fb33b57565dc4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rdparty/duckx",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ClassApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "duckx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassApp-Debug-575a9dd7045a5d1c89f7.json",
+					"name" : "ClassApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassApp_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassApp_autogen-Debug-a01f916a99819ecc90ea.json",
+					"name" : "ClassApp_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassApp_autogen_timestamp_deps-Debug-e7ab626e653a99592154.json",
+					"name" : "ClassApp_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "duckx::@39bf433610838ebad305",
+					"jsonFile" : "target-duckx-Debug-ad3b1f6eb72c86b787ea.json",
+					"name" : "duckx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "duckx_autogen::@39bf433610838ebad305",
+					"jsonFile" : "target-duckx_autogen-Debug-269c1c4c90c4d439b548.json",
+					"name" : "duckx_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "duckx_autogen_timestamp_deps::@39bf433610838ebad305",
+					"jsonFile" : "target-duckx_autogen_timestamp_deps-Debug-65dcc1242d6bb6d862db.json",
+					"name" : "duckx_autogen_timestamp_deps",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/salie/OneDrive/Documents/Start 3",
+		"source" : "C:/Users/salie/OneDrive/Documents/Start 3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
